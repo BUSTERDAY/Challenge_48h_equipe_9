@@ -11,6 +11,8 @@ func main() {
 	http.Handle("/assets/", http.StripPrefix("/assets/", static))
 
 	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/kermit", kermitHandler)
+	http.HandleFunc("/robots.txt", robotTXT)
 
 	// Launches the server:
 	preferredPort := ":8080"
