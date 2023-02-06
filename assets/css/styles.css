@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --mdp:QnJhdm9UdUFzVHJvdXZlTGVNRFA=;
+}
+
 body, html {
     height: 100vh;
     width: 100vw;
@@ -12,9 +16,11 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 form {
+    /* UHJlc3F1ZURvbW1hZ2U= */
     width: 95%;
     max-width: 350px;
     display: flex;
@@ -23,6 +29,7 @@ form {
 }
 
 input {
+    /* UHJlc3F1ZUVzc2F5ZUVuY29yZQ== */
     width: 100%;
     outline: none;
     background-color: #fff;
@@ -36,6 +43,7 @@ input {
 }
 
 input[type=submit] {
+    /* RG9tbWFUYUZhaWxsaXRSZXVzc2ly */
     outline: none;
     border: none;
     margin: 10px auto 0;
@@ -49,3 +57,9 @@ input[type=submit] {
     width: fit-content;
     cursor: pointer;
 }
+
+.c {
+    /* QnJhdm9UdUFzVHJvdXZlTGVNRFA= */
+    color : #ececec ;
+}
+
