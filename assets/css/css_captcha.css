@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(62, 62, 62);
+}
+
+h1{
+    color:rgb(242, 140, 38);
+    font-size: 50px;
+}
+
+p{
+    color:rgb(242, 140, 38);
+    font-size: 20px;
+}
+
+.ligne_1{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.encore_un_peu{
+    display: none;
+    width: 11.2%;
+    height: auto;
+}
+#meliodas{
+    width: 15%;
+    height: auto;
+}
+#vador{
+    width: 32%;
+    height: auto;
+}
+#noblesse{
+    width: 32%;
+    height: auto;
+}
+
+.ligne2{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#test{
+    display: none;
+    width: 11.2%;
+    height: auto;
+}
+#SNK{
+    width: 32%;
+    height: auto;
+}
+#limule{
+    width: 18.8%;
+    height: auto;
+}
+#zerotwo{
+    width: 14.1%;
+    height: auto;
+}
+.troll{
+    display: none;
+    width: 11.2%;
+    height: auto;
+}
+
+.ligne3{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#KA{
+    width: 32%;
+    height: auto;
+}
+#lamort{
+    width: 16.2%;
+    height: auto;
+}
+#SCP{
+    width: 11.2%;
+    height: auto;
+}
+
+.asuna2{
+    display: none;
+    width: 11.2%;
+    height: auto;
+}
