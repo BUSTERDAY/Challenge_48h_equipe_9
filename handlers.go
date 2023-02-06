@@ -11,7 +11,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	template.Execute(w, nil)
 
 	if r.Method == "POST" {
-		if r.FormValue("username") == "username" && r.FormValue("password") == "BravoTuAsTrouveLeMDP" {
+		if r.FormValue("username") == "elephant" && r.FormValue("password") == "b" {
 			fmt.Println("juste")
 		} else {
 			fmt.Println("faux")
