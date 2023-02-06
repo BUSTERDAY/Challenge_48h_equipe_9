@@ -7,17 +7,16 @@ import (
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "POST" {
+		fmt.Println(r.FormValue("username"), r.FormValue("password"))
+		if r.FormValue("username") == "elephant" && r.FormValue("password") == "BravoTuAsTrouveLeMDP" {
+			http.Redirect(w, r, "/kermit", http.StatusSeeOther)
+		}
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
+	}
 	template := template.Must(template.ParseFiles("templates/index.html"))
 	template.Execute(w, nil)
-
-	if r.Method == "POST" {
-		if r.FormValue("username") == "elephant" && r.FormValue("password") == "b" {
-			fmt.Println("juste")
-		} else {
-			fmt.Println("faux")
-		}
-
-	}
 }
 
 func kermitHandler(w http.ResponseWriter, r *http.Request) {
