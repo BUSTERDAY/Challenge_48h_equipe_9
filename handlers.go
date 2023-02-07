@@ -10,7 +10,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		fmt.Println(r.FormValue("username"), r.FormValue("password"))
 		if r.FormValue("username") == "elephant" && r.FormValue("password") == "BravoTuAsTrouveLeMDP" {
-			http.Redirect(w, r, "/kermit", http.StatusSeeOther)
+			http.Redirect(w, r, "/buttons", http.StatusSeeOther)
 		}
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
@@ -20,12 +20,18 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func kermitHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "POST" && r.FormValue("answer") == "Bip Boup Eheh" {
-		fmt.Println("Alright")
-		w.Write([]byte("Success"))
+	if r.Method == "POST" {
+		if r.FormValue("answer") == "Bip Boup Eheh" {
+			w.Write([]byte("/mountain"))
+		}
 		return
 	}
 	template := template.Must(template.ParseFiles("templates/kermit.html"))
+	template.Execute(w, nil)
+}
+
+func captchaHandler(w http.ResponseWriter, r *http.Request) {
+	template := template.Must(template.ParseFiles("templates/imghidden.html"))
 	template.Execute(w, nil)
 
 }
@@ -52,7 +58,7 @@ func cookieHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" && r.FormValue("cookie") != "" {
 
 		if r.FormValue("cookie") == "chocolateCookie" {
-			w.Write([]byte("That's it !!"))
+			w.Write([]byte("Nice !! Go to /kermit now."))
 			return
 		} else {
 			if (r.FormValue("cookie") == "evcmwpcrtJsfmws") || ((r.FormValue("cookie") == "evcmwpcrtJsfmws") && cookieFound && cookieTries < 3) {
