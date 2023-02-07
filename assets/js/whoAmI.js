@@ -19,7 +19,7 @@ function printText () {
 
 
 const isHover = e => e.parentElement.querySelector(':hover') === e;    
-
+var hint1, hint2, hint3, hint4, hint5, hint6 = undefined;
 document.addEventListener('mousemove', function checkHover() {
     const hint1_hovered = isHover(textContainer);
         if(hint1_hovered) {
@@ -32,66 +32,71 @@ document.addEventListener('mousemove', function checkHover() {
             hint1.style.fontSize = randomTextSize() + 'px';
             globalContainer.appendChild(hint1);
     }
-
-    const hint2_hovered = isHover(hint1);
-        if(hint2_hovered) {
-            hint2 = document.createElement('div');
-            hint2.classList.add('hint');
-            hint2.innerHTML = "I'm scared...";
-            hint2.style.top = Math.random() * (windowHeight - 100) + 'px';
-            hint2.style.left = Math.random() * (windowWidth - 100) + 'px';
-            hint2.style.color = '#979797'
-            hint2.style.fontSize = randomTextSize() + 'px';
-            globalContainer.appendChild(hint2);
-    }
-
-    const hint3_hovered = isHover(hint2);
-    if(hint3_hovered) {
-        hint3 = document.createElement('div');
-        hint3.classList.add('hint');
-        hint3.innerHTML = "What is happening...";
-        hint3.style.top = Math.random() * (windowHeight - 100) + 'px';
-        hint3.style.left = Math.random() * (windowWidth - 100) + 'px';
-        hint3.style.color = '#6C6C6C'
-        hint3.style.fontSize = randomTextSize() + 'px';
-        globalContainer.appendChild(hint3);
-    }
-
-    const hint4_hovered = isHover(hint3);
-    if(hint4_hovered) {
-        hint4 = document.createElement('div');
-        hint4.classList.add('hint');
-        hint4.innerHTML = "Help me...";
-        hint4.style.top = Math.random() * (windowHeight - 100) + 'px';
-        hint4.style.left = Math.random() * (windowWidth - 100) + 'px';
-        hint4.style.color = '#4D4D4D'
-        hint4.style.fontSize = randomTextSize() + 'px';
-        globalContainer.appendChild(hint4);
-    }
-
-    const hint5_hovered = isHover(hint4);
-    if(hint5_hovered) {
-        hint5 = document.createElement('div');
-        hint5.classList.add('hint');
-        hint5.innerHTML = "I need a cookie...";
-        hint5.style.top = Math.random() * (windowHeight - 100) + 'px';
-        hint5.style.left = Math.random() * (windowWidth - 100) + 'px';
-        hint5.style.color = '#363636'
-        hint5.style.fontSize = randomTextSize() + 'px';
-        globalContainer.appendChild(hint5);
-    }
-
-    const hint6_hovered = isHover(hint5);
-    if(hint6_hovered) {
-        hint6 = document.createElement('div');
-        hint6.classList.add('hint');
-        hint6.innerHTML = "Make me eatACookie(whereIsTheCookie)";
-        hint6.style.top = Math.random() * (windowHeight - 100) + 'px';
-        hint6.style.left = Math.random() * (windowWidth - 100) + 'px';
-        hint6.style.color = '#363636'
-        hint6.style.fontSize = randomTextSize() + 'px';
-        globalContainer.appendChild(hint6);
-    }
+        if (hint1) {
+            const hint2_hovered = isHover(hint1);
+                if(hint2_hovered) {
+                    hint2 = document.createElement('div');
+                    hint2.classList.add('hint');
+                    hint2.innerHTML = "I'm scared...";
+                    hint2.style.top = Math.random() * (windowHeight - 100) + 'px';
+                    hint2.style.left = Math.random() * (windowWidth - 100) + 'px';
+                    hint2.style.color = '#979797'
+                    hint2.style.fontSize = randomTextSize() + 'px';
+                    globalContainer.appendChild(hint2);
+            }            
+        }
+        if (hint2) {
+            const hint3_hovered = isHover(hint2);
+            if(hint3_hovered) {
+                hint3 = document.createElement('div');
+                hint3.classList.add('hint');
+                hint3.innerHTML = "What is happening...";
+                hint3.style.top = Math.random() * (windowHeight - 100) + 'px';
+                hint3.style.left = Math.random() * (windowWidth - 100) + 'px';
+                hint3.style.color = '#6C6C6C'
+                hint3.style.fontSize = randomTextSize() + 'px';
+                globalContainer.appendChild(hint3);
+            }    
+        }
+        if (hint3) {
+            const hint4_hovered = isHover(hint3);
+            if(hint4_hovered) {
+                hint4 = document.createElement('div');
+                hint4.classList.add('hint');
+                hint4.innerHTML = "Help me...";
+                hint4.style.top = Math.random() * (windowHeight - 100) + 'px';
+                hint4.style.left = Math.random() * (windowWidth - 100) + 'px';
+                hint4.style.color = '#4D4D4D'
+                hint4.style.fontSize = randomTextSize() + 'px';
+                globalContainer.appendChild(hint4);
+            }          
+        }
+        if (hint4) {
+            const hint5_hovered = isHover(hint4);
+            if(hint5_hovered) {
+                hint5 = document.createElement('div');
+                hint5.classList.add('hint');
+                hint5.innerHTML = "I need a cookie...";
+                hint5.style.top = Math.random() * (windowHeight - 100) + 'px';
+                hint5.style.left = Math.random() * (windowWidth - 100) + 'px';
+                hint5.style.color = '#363636'
+                hint5.style.fontSize = randomTextSize() + 'px';
+                globalContainer.appendChild(hint5);
+            }
+        }
+        if (hint5) {
+            const hint6_hovered = isHover(hint5);
+            if(hint6_hovered) {
+                hint6 = document.createElement('div');
+                hint6.classList.add('hint');
+                hint6.innerHTML = "Make me eatACookie(whereIsTheCookie)";
+                hint6.style.top = Math.random() * (windowHeight - 100) + 'px';
+                hint6.style.left = Math.random() * (windowWidth - 100) + 'px';
+                hint6.style.color = '#363636'
+                hint6.style.fontSize = randomTextSize() + 'px';
+                globalContainer.appendChild(hint6);
+            }
+        }
 });
 
 function eatACookie(cookie="") {
