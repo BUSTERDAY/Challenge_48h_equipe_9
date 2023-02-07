@@ -37,7 +37,7 @@ func captchaHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func robotTXT(w http.ResponseWriter, r *http.Request) {
-	template := template.Must(template.ParseFiles("robots.txt"))
+	template := template.Must(template.ParseFiles("assets/img/robots.txt"))
 	template.Execute(w, nil)
 }
 
