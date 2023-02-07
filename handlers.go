@@ -34,3 +34,13 @@ func robotTXT(w http.ResponseWriter, r *http.Request) {
 	template := template.Must(template.ParseFiles("robots.txt"))
 	template.Execute(w, nil)
 }
+
+func buttonsHandler(w http.ResponseWriter, r *http.Request) {
+	template := template.Must(template.ParseFiles("templates/buttons.html"))
+	template.Execute(w, nil)
+}
+
+func mountainHandler(w http.ResponseWriter, r *http.Request) {
+	template := template.Must(template.ParseFiles("templates/mountain.html"))
+	template.Execute(w, nil)
+}

@@ -13,7 +13,8 @@ func main() {
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/kermit", kermitHandler)
 	http.HandleFunc("/robots.txt", robotTXT)
-
+	http.HandleFunc("/buttons", buttonsHandler)
+	http.HandleFunc("/mountain", mountainHandler)
 	// Launches the server:
 	preferredPort := ":8080"
 	fmt.Printf("Starting server at port %v\n", preferredPort)
