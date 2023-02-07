@@ -94,15 +94,29 @@ document.addEventListener('mousemove', function checkHover() {
     }
 });
 
-function eatACookie(cookie) {
+function eatACookie(cookie="") {
+    if (cookie == "") {
+        return
+    }
     $.ajax({
         type: "POST",
-        url: "/whoami",
-        data: { cookie: cookie },
+        url: "/whoAmI",
+        data: {cookie: cookie},
         success: function(data) {
-            console.log(data);
+            returnData(data);
         }
     })
+}
+
+function returnData(data="") {
+    if (data.match(/\[(.+)\]/)) {
+        let link = data.match(/\[(.+)\]/)[1]
+        document.querySelector("a").setAttribute("href", link)
+        document.querySelector("a").setAttribute("target", "_blank")
+        document.querySelector(".text").style.cursor = "pointer"
+        data = data.replace(/\[(.+)\]/, "")
+    }
+    return console.log(data)
 }
 
 printText();
