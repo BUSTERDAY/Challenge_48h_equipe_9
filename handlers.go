@@ -44,3 +44,8 @@ func mountainHandler(w http.ResponseWriter, r *http.Request) {
 	template := template.Must(template.ParseFiles("templates/mountain.html"))
 	template.Execute(w, nil)
 }
+
+func cookieHandler(w http.ResponseWriter, r *http.Request) {
+	template := template.Must(template.ParseFiles("templates/whoAmI.html"))
+	template.Execute(w, nil)
+}
