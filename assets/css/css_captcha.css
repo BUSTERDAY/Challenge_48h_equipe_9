@@ -1,40 +1,35 @@
-body{
-    background-color: rgb(62, 62, 62);
-}
-
-h1{
-    color:rgb(242, 140, 38);
-    font-size: 50px;
-}
-
-p{
-    color:rgb(242, 140, 38);
-    font-size: 20px;
+.centrer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .ligne_1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     width: 100%;
     height: 100%;
 }
 .encore_un_peu{
     display: none;
-    width: 11.2%;
-    height: auto;
 }
-#meliodas{
-    width: 15%;
-    height: auto;
+#kermit_haut_gauche{
+    width: 150px;
+    height: 150px;
 }
-#vador{
-    width: 32%;
-    height: auto;
+#kermit_haut_centre{
+    width: 150px;
+    height: 150px;
 }
-#noblesse{
-    width: 32%;
-    height: auto;
+#kermit_haut_droite{
+    width: 150px;
+    height: 150px;
 }
 
 .ligne2{
@@ -46,25 +41,21 @@ p{
 }
 #test{
     display: none;
-    width: 11.2%;
-    height: auto;
 }
-#SNK{
-    width: 32%;
-    height: auto;
+#kermite_milieu_gauche{
+    width: 150px;
+    height: 150px;
 }
-#limule{
-    width: 18.8%;
-    height: auto;
+#kermite_milieu_centre{
+    width: 150px;
+    height: 150px;
 }
-#zerotwo{
-    width: 14.1%;
-    height: auto;
+#kermite_milieu_droite{
+    width:150px;
+    height: 150px;
 }
 .troll{
     display: none;
-    width: 11.2%;
-    height: auto;
 }
 
 .ligne3{
@@ -74,21 +65,21 @@ p{
     width: 100%;
     height: 100%;
 }
-#KA{
-    width: 32%;
-    height: auto;
+#kermit_bas_gauche{
+    width: 150px;
+    height: 150px;
 }
-#lamort{
-    width: 16.2%;
-    height: auto;
+#kermit_bas_centre{
+    width: 150px;
+    height: 150px;
 }
-#SCP{
-    width: 11.2%;
-    height: auto;
+#kermit_bas_droite{
+    width: 150px;
+    height: 150px;
 }
 
-.asuna{
+.kermit_cacher{
     display: none;
-    width: 11.2%;
-    height: auto;
+    width:150px;
+    height: 150px;
 }
