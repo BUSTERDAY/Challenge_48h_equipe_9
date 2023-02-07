@@ -23,7 +23,7 @@ function generateAnswer(number=currentKermit) {
         return
     }
     if (currentKermit == 10) {
-        alert("Golden Kermit alert!")
+        alert("Ils sont mignons hein ? Vous êtes sûrs que c'est ici ?")
     }
 
     for (let i = 0; i < number; i++) {
@@ -108,7 +108,7 @@ function robotPosition() {
                 <form action="">
                     Un robot ?? Prouve-le !
                     <input name="answer" type="text">
-                    <span id="error" style="font-size:14px; color: red; opacity:">Raté...</span>
+                    <span id="error" style="font-size:14px; color: red; opacity:0">Raté...</span>
                     <input type="submit">
                 </form>`
                 document.querySelector(".container").appendChild(div)
@@ -120,8 +120,8 @@ function robotPosition() {
                             url: "/kermit",
                             data: { "answer": e.currentTarget["answer"].value },
                             success: function(data) {
-                                if (data == "Success") {
-                                    document.querySelector("form").remove()
+                                if (data != "") {
+                                    window.location.href = data
                                 } else {
                                     document.getElementById("error").style.opacity = 1;
                                 }
