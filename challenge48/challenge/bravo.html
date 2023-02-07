@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+<script>
+var randomstring1 = Math.random().toString(36).slice(-3);
+var randomstring2 = Math.random().toString(36).slice(-3);
+var phrase = randomstring1+'FB'+randomstring2;
+</script>
+</head>
+<body>
+<div id="image">
+<img src="images/end.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="alert(phrase);"  coords="242,20,558,318" shape="rect">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#79a4d2;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Tu as gagné petit con !");
+imageMapResize();
+
+</script>
+</body>
+</html>

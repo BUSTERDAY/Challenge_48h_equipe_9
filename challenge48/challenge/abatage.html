@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/02.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area alt="bouton vert" title="bouton vert" href="abisses.html" coords="60,290,250,330" shape="rect">
+    <area onclick="afficheMessage('Ce bouton est déjà enclenché...');" coords="407,250,455,308" shape="rect">
+    <area onclick="afficheMessage('J\'abaisse... rien ! Je remonte !');" coords="585,59,675,188" shape="rect">
+    <area onclick="afficheMessage('Bas... bof ! Haut... re-bof !');" coords="679,61,769,187" shape="rect">
+    <area onclick="afficheMessage('J\'essaie ce bouton : rien ne se passe. Je le remets comme avant.');" coords="491,327,581,456" shape="rect">
+    <area onclick="afficheMessage('Je lève, je rabaisse l\'interrupteur. Cela ne change rien !');" coords="585,328,671,455" shape="rect">
+    <area onclick="afficheMessage('Bas, haut, bas, haut. Non rien ne change !');" coords="679,329,765,456" shape="rect">
+    
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("On dirait bien que ce boîtier est un tableau électrique. Il faudrait que je trouve un affichage lumineux.");
+imageMapResize();
+
+</script>
+</body>
+</html>

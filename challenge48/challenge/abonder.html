@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/10.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="afficheMessage('Non, ce ne peut pas être comme ça et je risque de faire un court-circuit si je fais n\'importe quoi !');" coords="82,178,173,358" shape="rect">
+    <area onclick="afficheMessage('Oui, c\'est bien ça ! Le fil vert et jaune est le fil de terre et il faut le relier au connecteur mâle. <a href=abbayes.html>Voyons si je branche...</a>');" coords="250,183,344,358" shape="rect">
+    <area onclick="afficheMessage('Je dois revoir mon cours, c\'est sûr !');" coords="428,183,513,360" shape="rect">
+    <area onclick="afficheMessage('Je viens de cliquer au hasard, non ?!');" coords="611,184,697,359" shape="rect">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Réfléchir ! A quoi correspond la couleur des fils déjà ?");
+imageMapResize();
+
+</script>
+</body>
+</html>

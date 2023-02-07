@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+<script>
+function isValid() {
+var test = true;
+if ((document.getElementById('valeur').value=='0.4')||(document.getElementById('valeur').value=='0,4')||(document.getElementById('valeur').value=='0,4A')||(document.getElementById('valeur').value=='0.4A')||(document.getElementById('valeur').value=='0,4 A')||(document.getElementById('valeur').value=='0.4 A')) {
+document.location='acacias2.html';
+} else {
+document.getElementById('valeur').value = '';
+document.getElementById('indice').style='display=block;';
+test = false;
+};
+return test;
+}
+</script>
+</head>
+<body>
+<div id="image">
+<img src="images/05.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area data-lity href="#inline" coords="26,16,774,575" shape="rect">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" class="lity-hide">
+<form id="go" name="go" action="acacias2.html" method="post" onsubmit="return isValid();">
+Je connais la puissance de la lampe. Je connais la tension de la prise qui était indiquée sur le disjoncteur principal.
+Quelle est, en ampères, la valeur de l'intensité qui traverse la lampe lorsqu'elle est allumée ? <br />
+<input type="text" id="valeur" /> 
+<input type="submit" value="Valider ma réponse" />
+</form>
+<div id="indice" style='display:none;'>Indice : <img src="images/indicepuissance.png" width="156px" height="144px" /></div>
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Ok, c\'est donc une lampe dont la puissance vaut 92 W alimentée par la tension du secteur. Et son intensité alors ? il faudrait se depêcher à un moment");
+imageMapResize();
+
+</script>
+</body>
+</html>

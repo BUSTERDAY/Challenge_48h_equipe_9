@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/11.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="afficheMessage('Sign O\' the Times... Je le réécouterai à l\'occasion.');" coords="271,191,30" shape="circle">
+    <area onclick="afficheMessage('Jolie gravure.');" data-lity href="images/gravure.png" coords="42,158,72,245" shape="rect">
+    <area onclick="afficheMessage('Sûrement le portrait d\'un grand physicien.');" data-lity href="images/james.png" coords="748,237,697,307" shape="rect">
+    <area onclick="afficheMessage('La carte donne envie de voyager, avec son chemin en ... W');" coords="600,278,380,159" shape="rect">
+    <area onclick="afficheMessage('Beurk !');" coords="92,429,180,538" shape="rect">
+    <area onclick="afficheMessage('Pouah !');" coords="681,533,620,474" shape="rect">
+    <area onclick="afficheMessage('Araignée du soir, espoir.');" coords="158,76,208,139" shape="rect">
+    <area href="abstenu.html" coords="86,235,96,235,153,255,151,294,147,299,88,276" shape="poly">
+    <area onclick="afficheMessage('Je crois que je n\'aime définitivement plus les lampes de cette couleur !');" coords="112,208,108,217,113,229,126,227,138,228,154,238,167,229,170,217,160,204,149,202,136,212,122,213" shape="poly">
+    <area onclick="afficheMessage('Lumière, douce lumière...');" coords="511,315,527,329,544,328,553,387,527,397,553,406,571,398,565,389,553,318,546,302,534,286,499,296" shape="poly">
+    <area onclick="afficheMessage('C\'est une bien jolie table.');" coords="201,437,201,558,213,560,223,550,225,481,280,479,278,508,294,511,305,482,529,482,526,560,551,553,552,471,578,444,577,506,600,506,599,380,557,417,494,428,466,439,368,437,371,409,352,407,335,434,300,434,278,384" shape="poly">
+    <area onclick="afficheMessage('Il faut que je trouve le nom de cet homme, cela me servira plus tard.');" data-lity href="images/14.png" coords="289,396,307,426,334,414,334,403,312,386" shape="poly">
+    <area onclick="afficheMessage('La prise est bien branchée, mais l\'ordinateur ne s\'allume pas encore');" coords="352,355,351,376,359,389,381,386,371,356" shape="poly">
+    <area onclick="afficheMessage('Il manque assurément quelque chose pour que l\'ordinateur s\'allume...');" coords="391,312,390,404,376,428,466,428,481,414,480,404,496,389,495,311" shape="poly">
+    <area onclick="afficheMessage('La liste de course du maître des lieux !');" data-lity href="images\pensebete.png" coords="504,397,497,407,510,410,517,401" shape="poly">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("La prise est branchée, mais l\'ordinateur ne s'allume pas. Il doit manquer un truc !");
+imageMapResize();
+
+</script>
+</body>
+</html>

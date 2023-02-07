@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/02e.png" height="100%" usemap="#image-map">
+<map name="image-map">
+    <area onclick="afficheMessage('Loupé...');" coords="159,191,413,233" shape="rect">
+    <area onclick="afficheMessage('C\'est pourtant pas sorcier...');" coords="157,236,414,272" shape="rect">
+    <area onclick="afficheMessage('Et si j\'arrêtais de répondre au hasard pour voir ?');" coords="157,276,413,314" shape="rect">
+    <area href="abisses4.html" coords="158,316,411,355" shape="rect">
+    <area onclick="afficheMessage('Promis, je reflechis parce que je suis con');" coords="158,357,413,394" shape="rect">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Bon, j'ai identifié le disjoncteur principal. Que reste-t-il ?");
+imageMapResize();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/02b.png" height="100%" usemap="#image-map">
+<map name="image-map">
+    <area onclick="afficheMessage('Ce bouton ne fait plus rien.');" alt="boutons bleus" coords="70,297,242,320" shape="rect">
+    <area alt="on" href="abeille.html" coords="411,165,458,220" shape="rect">
+    <area onclick="afficheMessage('Ce bouton est déjà enfoncé.');" alt="off" coords="410,253,457,310" shape="rect">
+    <area onclick="afficheMessage('J\'ai beau l\'abaisser ou le relever, ce bouton ne change rien.');" alt="cc haut" coords="588,59,772,192" shape="rect">
+    <area onclick="afficheMessage('J\'ai beau l\'abaisser ou le relever, ce bouton ne change rien.');" alt="cc bas" coords="493,328,772,462" shape="rect">
+</map>
+
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Ok, c'était bien les coupe-circuits ! Maintenant, je dois rétablir le courant ...");
+imageMapResize();
+
+</script>
+</body>
+</html>

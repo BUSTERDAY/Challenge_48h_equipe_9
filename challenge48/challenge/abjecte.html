@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/08.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="afficheMessage('C\'est la tension d\'une batterie de voiture, pas celle d\'une prise de courant !');" coords="165,460,210,507" shape="rect">
+    <area onclick="afficheMessage('C\'est la tension à Tokyo...');" coords="260,461,213,506" shape="rect">
+    <area onclick="afficheMessage('C\'est la tension à New York...');" coords="308,460,263,507" shape="rect">
+    <area onclick="afficheMessage('C\'est bien la tension en France mais l\'ordinateur ne s\'allume pas. <a href=abriter.html>Voyons la prise.</a>');" coords="356,461,310,507" shape="rect">
+    <area onclick="afficheMessage('C\'est une tension qui n\'existe pas pour les prises classiques.');" coords="358,461,403,506" shape="rect">
+    <area onclick="afficheMessage('Je crois me souvenir que c\'est la tension d\'alimentation du convecteur temporel inventé par le Dr Emmett Brown dans Retour vers le futur...');" coords="452,460,407,508" shape="rect">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Pose toi deux secondes avec tes neuronnes d'abruti et dit moi qu\'ellle est la tension habituelle en france'.");
+imageMapResize();
+
+</script>
+</body>
+</html>

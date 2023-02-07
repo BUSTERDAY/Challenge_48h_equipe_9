@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/02d.png" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area href="abisses3.html" coords="68,186,327,228" shape="rect">
+    <area onclick="afficheMessage('Ce n\'est pas ça...');" coords="68,231,327,267" shape="rect">
+    <area onclick="afficheMessage('Pas brillant comme réponse...');" coords="69,269,325,308" shape="rect">
+    <area onclick="afficheMessage('Je ne fais pas des étincelles sur ce coup-là...');" coords="69,310,326,350" shape="rect">
+    <area onclick="afficheMessage('Oui, oui, je promets de mieux apprendre mon cours...');" coords="70,353,325,390" shape="rect">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("C\'était bien le compteur électrique, passons à la suite...");
+imageMapResize();
+
+</script>
+</body>
+</html>

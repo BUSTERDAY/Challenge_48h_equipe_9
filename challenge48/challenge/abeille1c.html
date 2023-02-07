@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lity.css" />
+</head>
+<body>
+<div id="image">
+<img src="images/03.gif" height="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="afficheMessage('Toujours la même heure, cette horloge doit être en panne.');" coords="270,190,31" shape="circle">
+    <area onclick="afficheMessage('Ah, on dirait bien que c\'est une carte en fait. Mais je ne vois pas très bien.');" coords="381,159,600,280" shape="rect">
+    <area onclick="afficheMessage('Qui peut bien laisser un sac poubelle comme ça ?');" coords="85,428,183,542" shape="rect">
+    <area onclick="afficheMessage('C\'est cette lampe qui fait cette insupportable lumière rouge...');" coords="116,208,116,232,140,231,158,241,174,232,178,220,171,209,155,202,136,215" shape="poly">
+    <area onclick="afficheMessage('Je sais, je sais : le tableau électrique !!!');" coords="87,231,86,275,152,300,152,255" shape="poly">
+    <area onclick="afficheMessage('Une poubelle. La lumière ! Il faut que je fasse quelque chose !');" coords="620,475,629,531,652,538,674,530,685,473,651,469" shape="poly">
+    <area onclick="afficheMessage('Un tableau, peut-être...');" coords="40,158,40,237,74,246,75,167" shape="poly">
+    <area onclick="afficheMessage('Un portrait, peut-être...');" coords="696,247,696,299,747,309,748,236" shape="poly">
+	<area href="abeille1.html" coords="400,450,480,470" shape="rect">
+	<area href="abeille1b.html" coords="260,447,340,470" shape="rect">
+    <area onclick="afficheMessage('Un ordinateur, éteint. Je dois allumer une vraie lumière avant tout.');" coords="402,313,390,319,389,376,353,383,353,420,376,429,466,432,484,405,496,392,494,314" shape="poly">
+    <area onclick="afficheMessage('Une table, rouge, noire, rouge, noire...');" coords="281,378,203,438,201,558,225,557,226,483,274,483,275,511,300,511,306,482,526,483,526,560,553,557,552,471,577,444,579,510,603,509,603,416,545,419,490,417,483,437,354,435,282,436" shape="poly">
+    <area onclick="afficheMessage('Impossible de lire quoi que ce soit avec cette lumière rouge.');" coords="281,378,203,438,201,558,225,557,226,483,274,483,275,511,300,511,306,482,526,483,526,560,553,557,552,471,577,444,579,510,603,509,603,416,545,419,490,417,483,437,354,435,282,436" shape="poly">
+    <area onclick="afficheMessage('Un bout de papier rouge, noir, rouge, noir...');" coords="500,395,496,406,513,411,518,401" shape="poly">
+</map>
+</div>
+<div id="consignes">
+</div>
+<div id="inline" style="overflow:auto;background:#FDFDF6;padding:20px;max-width:100%;border-radius:6px" class="lity-hide">
+Inline content
+</div>
+<script src="js/consignes.js"></script>
+<script src="js/imageMapResizer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/lity.js"></script>
+<script>
+afficheMessage("Il faut vraiment que je fasse quelque chose pour cette lumière !");
+imageMapResize();
+
+</script>
+</body>
+</html>
