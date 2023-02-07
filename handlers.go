@@ -51,6 +51,11 @@ func mountainHandler(w http.ResponseWriter, r *http.Request) {
 	template.Execute(w, nil)
 }
 
+func hiddenHandler(w http.ResponseWriter, r *http.Request) {
+	template := template.Must(template.ParseFiles("templates/hidden.html"))
+	template.Execute(w, nil)
+}
+
 var cookieTries = 0
 var cookieFound = false
 

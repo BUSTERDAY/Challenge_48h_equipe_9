@@ -17,6 +17,7 @@ func main() {
 	http.HandleFunc("/mountain", mountainHandler)
 	http.HandleFunc("/whoAmI", cookieHandler)
 	http.HandleFunc("/captcha", captchaHandler)
+	http.HandleFunc("/hidden", hiddenHandler)
 	// Launches the server:
 	preferredPort := ":8080"
 	fmt.Printf("Starting server at port %v\n", preferredPort)
